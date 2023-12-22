@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        location.hostname = 'neom.online.dev.br';
+      if (document.domain == "junior.online.net.br") {
+        if (document.URL.includes("/admin")) {
+          location.hostname = "admin.junior.online.dev.br";
+        } else {
+          location.hostname = "junior.online.dev.br";
+        }
+      }
+      if (document.domain == "atena.online.net.br") {
+        if (document.URL.includes("/admin")) {
+          location.hostname = "admin.atena.online.dev.br";
+        } else {
+          location.hostname = "atena.online.dev.br";
+        }
+      }
+      if (document.domain == "neom.online.net.br") {
+        location.hostname = "neom.online.dev.br";
+      }
     </script>
   </head>
 
